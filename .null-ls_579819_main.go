@@ -6,10 +6,8 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-//	"os"
 	"time"
 
-//	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
@@ -66,6 +64,3 @@ func saveIPHandler(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Fprintf(w, "Data saved successfully")
 }
-
-
-
