@@ -54,7 +54,9 @@ func saveIPHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Add the current time to the data map
-	data["time"] = time.Now()
+
+	currentTime := time.Now().Format("2006-01-02 15:04:05") // Use Go's reference time format
+	data["time"] = currentTime
 
 	// Insert the document into MongoDB
 	collection := mongoClient.Database("yourDatabaseName").Collection("ips")
